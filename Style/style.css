@@ -1,20 +1,30 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background-color: deeppink;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+    background-color: mediumaquamarine;
 }
 
-.box {
-    width: 30px;
-    height: 30px;
-    background-color: aliceblue;
-    border-radius: 5px;
-    margin: 10px;
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+h1 {
+    animation: popup 1s cubic-bezier(.55,.05,.48,1.29) infinite;
+}
+
+@keyframes popup {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
 }
