@@ -4,19 +4,44 @@
     box-sizing: border-box;
     color: whitesmoke;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
 }
 
-body {
+/* body {
+    width: 100vw;
+    height: 100vh;
+} */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh
+}
+
+section:nth-child(1) {
     background-color: mediumaquamarine;
 }
 
-main {
-    display: grid;
-    place-items: center;
-    height: 100vh;
+section:nth-child(2) {
+    background-color: crimson;
+}
+
+section:nth-child(3) {
+    background-color: cornflowerblue;
 }
 
 h1 {
+    font-size: 50px;
+    font-family: cursive;
     animation: popup 1s cubic-bezier(.55,.05,.48,1.29) infinite;
 }
 
